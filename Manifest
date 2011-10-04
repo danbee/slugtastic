@@ -1,4 +1,5 @@
+Manifest
 README.md
 Rakefile
 lib/slugtastic.rb
-Manifest
+slugtastic.gemspec
