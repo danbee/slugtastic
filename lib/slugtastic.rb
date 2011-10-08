@@ -4,7 +4,7 @@ module Slugtastic
   end
   
   def generate_slug(string)
-    string.downcase.gsub(/ /, '_').gsub(/[^a-z0-9\-_]/, '')
+    string.downcase.gsub(/ /, '_').gsub(/[^a-z0-9\-_]/, '') unless string.nil?
   end
 
   module ClassMethods
