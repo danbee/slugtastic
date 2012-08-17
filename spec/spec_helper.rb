@@ -1,0 +1,2 @@
+require "slugtastic"
+require "supermodel"

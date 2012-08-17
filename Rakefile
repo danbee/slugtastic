@@ -1,14 +1,7 @@
-require 'rubygems'
-require 'rake'
-require 'echoe'
+#!/usr/bin/env rake
+require "bundler/gem_tasks"
+require "rspec/core/rake_task"
 
-Echoe.new('slugtastic', '0.1.2') do |p|
-  p.description    = "A simple slug string generator for ActiveRecord. Will populate a slug attribute from another attribute."
-  p.url            = "http://github.com/danbee/slugtastic"
-  p.author         = "Dan Barber"
-  p.email          = "danbee@gmail.com"
-  p.ignore_pattern = ["tmp/*", "script/*"]
-  p.development_dependencies = []
-end
+RSpec::Core::RakeTask.new(:spec)
 
-Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
+task default: :spec
