@@ -1,3 +1,7 @@
+## v0.2.1
+
+* Added basic transliteration with IConv.
+
 ## v0.2.0
 
 * Rebuild of gem using bundler.
