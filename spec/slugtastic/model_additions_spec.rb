@@ -4,6 +4,7 @@ require 'spec_helper'
 class Model < SuperModel::Base
   include ActiveModel::Validations::Callbacks
   extend Slugtastic::ModelAdditions
+  attr_accessor :slug, :title
   has_slug :slug, from: :title
 end
 
