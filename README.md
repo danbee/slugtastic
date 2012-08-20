@@ -2,6 +2,13 @@
 
 Simple gem for autogenerating permalink style slugs for your ActiveRecord models.
 
+## Requirements
+
+* Ruby 1.9.2 or 1.9.3
+* Rails 3.1 or higher.
+
+It should work with Rails 3.0 but it hasn't been tested.
+
 ## Installation
 
 Add this line to your application's Gemfile:
