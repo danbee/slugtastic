@@ -1,3 +1,7 @@
+## v1.0.0
+
+* Added test for slugs with numbers.
+
 ## v0.2.1
 
 * Added basic transliteration with IConv.
