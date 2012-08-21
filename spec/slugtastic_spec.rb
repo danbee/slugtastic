@@ -11,6 +11,10 @@ describe Slugtastic do
       Slugtastic.generate_slug("A simple string.").should eq "a_simple_string"
     end
 
+    it "generates a slug from a string with numbers" do
+      Slugtastic.generate_slug("Slugtastic was built in 2012.").should eq "slugtastic_was_built_in_2012"
+    end
+
     it "handles strings with hypens in them" do
       Slugtastic.generate_slug("A string - with Hyphens").should eq "a_string_-_with_hyphens"
     end
