@@ -1,3 +1,9 @@
+## v1.1.0
+
+* Slugs are now generated with `parameterize`.
+* Spaces get converted to hyphens instead of underscores. Hyphens in the original string are collapsed.
+* Removed dependence on iconv.
+
 ## v1.0.0
 
 * Added test for slugs with numbers.

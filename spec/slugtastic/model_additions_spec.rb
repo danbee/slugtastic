@@ -10,15 +10,15 @@ end
 
 describe Slugtastic::ModelAdditions do
   it "generates a slug from the title" do
-    Model.create!(:title => "A Simple Title").slug.should eq "a_simple_title"
+    Model.create!(:title => "A Simple Title").slug.should eq "a-simple-title"
   end
 
   it "doesn't regenerate the slug if it already exists" do
     model = Model.create!(:title => "A Simple Title")
-    model.slug.should eq "a_simple_title"
+    model.slug.should eq "a-simple-title"
 
     model.title = "A new title"
     model.save
-    model.slug.should eq "a_simple_title"
+    model.slug.should eq "a-simple-title"
   end
 end
