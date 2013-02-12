@@ -1,3 +1,7 @@
+## v1.2.0
+
+* Added ability to substitute hyphen delimiter.
+
 ## v1.1.0
 
 * Slugs are now generated with `parameterize`.
