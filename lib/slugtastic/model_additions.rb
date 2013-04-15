@@ -9,7 +9,8 @@ module Slugtastic
     #   class Article < ActiveRecord::Base
     #     has_slug :slug, :from => :title
     #   end
-    def has_slug name, options = { :from => :title }
+    def has_slug name, options = {}
+      options.reverse_merge!({ :from => :title })
       before_validation do |record|
         send("#{name}=", Slugtastic.generate_slug(send(options[:from]), options[:delimiter])) if send(name).nil? or send(name).blank?
       end

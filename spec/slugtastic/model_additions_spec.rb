@@ -1,30 +1,45 @@
 # encoding: utf-8
 require 'spec_helper'
 
-class Model < SuperModel::Base
+class BaseModel < SuperModel::Base
   include ActiveModel::Validations::Callbacks
   extend Slugtastic::ModelAdditions
-  attr_accessor :slug, :slug_2, :title
-  has_slug :slug, from: :title
-  has_slug :slug_2, from: :title, delimiter: "_"
+end
+
+class Model < BaseModel
+  attr_accessor :slug, :name
+  has_slug :slug, from: :name
+end
+
+class ModelDefault < BaseModel
+  attr_accessor :slug, :title
+  has_slug :slug
+end
+
+class ModelDelimiter < BaseModel
+  attr_accessor :slug, :title
+  has_slug :slug, delimiter: "_"
 end
 
 describe Slugtastic::ModelAdditions do
-  it "generates a slug from the title" do
-    Model.create!(:title => "A Simple Title").slug.should eq "a-simple-title"
+  it "generates a slug from the name" do
+    Model.create!(:name => "A Simple Name").slug.should eq "a-simple-name"
+  end
+
+  it "defaults to generating the slug from title" do
+    ModelDefault.create!(:title => "A Simple Title").slug.should eq "a-simple-title"
   end
 
   it "generates a slug from the title with delimiter substitutions" do
-    Model.create!(:title => "A Simple Title").slug_2.should eq "a_simple_title"
+    ModelDelimiter.create!(:title => "A Simple Title").slug.should eq "a_simple_title"
   end
 
   it "doesn't regenerate the slug if it already exists" do
-    model = Model.create!(:title => "A Simple Title")
-    model.slug.should eq "a-simple-title"
+    model = Model.create!(:name => "A Simple Name")
+    model.slug.should eq "a-simple-name"
 
     model.title = "A new title"
     model.save
-    model.slug.should eq "a-simple-title"
-    model.slug_2.should eq "a_simple_title"
+    model.slug.should eq "a-simple-name"
   end
 end
