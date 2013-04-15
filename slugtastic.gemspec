@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["danbee@gmail.com"]
   gem.description   = %q{A simple slug string generator for ActiveRecord. Will populate a slug attribute from another attribute.}
   gem.summary       = %q{A simple slug string generator for ActiveRecord.}
-  gem.homepage      = ""
+  gem.homepage      = "http://danbarber.me/slugtastic"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
