@@ -1,4 +1,6 @@
-# Slugtastic [![Build Status](https://secure.travis-ci.org/danbee/slugtastic.png?branch=master)](http://travis-ci.org/danbee/slugtastic)
+# Slugtastic
+
+[![Codeship Status for danbee/slugtastic](https://codeship.com/projects/7a08ef30-0518-0132-d4b6-223503fac7d3/status?branch=master)](https://codeship.com/projects/30797)
 
 Simple gem for autogenerating permalink style slugs for your ActiveRecord models.
 
