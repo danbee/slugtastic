@@ -23,23 +23,23 @@ end
 
 describe Slugtastic::ModelAdditions do
   it "generates a slug from the name" do
-    Model.create!(:name => "A Simple Name").slug.should eq "a-simple-name"
+    expect(Model.create!(:name => "A Simple Name").slug).to eq "a-simple-name"
   end
 
   it "defaults to generating the slug from title" do
-    ModelDefault.create!(:title => "A Simple Title").slug.should eq "a-simple-title"
+    expect(ModelDefault.create!(:title => "A Simple Title").slug).to eq "a-simple-title"
   end
 
   it "generates a slug from the title with delimiter substitutions" do
-    ModelDelimiter.create!(:title => "A Simple Title").slug.should eq "a_simple_title"
+    expect(ModelDelimiter.create!(:title => "A Simple Title").slug).to eq "a_simple_title"
   end
 
   it "doesn't regenerate the slug if it already exists" do
     model = Model.create!(:name => "A Simple Name")
-    model.slug.should eq "a-simple-name"
+    expect(model.slug).to eq "a-simple-name"
 
     model.title = "A new title"
     model.save
-    model.slug.should eq "a-simple-name"
+    expect(model.slug).to eq "a-simple-name"
   end
 end
