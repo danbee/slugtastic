@@ -6,9 +6,7 @@ module Slugtastic
   def self.generate_slug(string, delimiter = nil)
     return if string.nil?
     slug = string.parameterize
-    if delimiter
-      slug.gsub!("-", delimiter)
-    end
+    slug.gsub!("-", delimiter) if delimiter
     slug
   end
 end
