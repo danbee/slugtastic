@@ -2,7 +2,10 @@
 
 [![Codeship Status for danbee/slugtastic](https://codeship.com/projects/7a08ef30-0518-0132-d4b6-223503fac7d3/status?branch=master)](https://codeship.com/projects/30797)
 
-Simple gem for autogenerating permalink style slugs for your ActiveRecord models.
+[![Gem Version](https://badge.fury.io/rb/slugtastic.svg)](https://badge.fury.io/rb/slugtastic)
+
+Simple gem for autogenerating permalink style slugs for your ActiveRecord
+models.
 
 ## Requirements
 
@@ -29,9 +32,11 @@ Or install it yourself as:
 
 Usage is very simple. Just add the following to your model:
 
-    has_slug :slug, :from => :title
+    slug :slug, from: :title
 
-This will generate a slug string from the title atrribute and store it in the slug attribute unless the slug already contains a string. The slug is generated pre-validation so you can still use `validates_presence_of :slug`.
+This will generate a slug string from the title atrribute and store it in the
+slug attribute unless the slug already contains a string. The slug is generated
+pre-validation so you can still use `validates_presence_of :slug`.
 
 There are no extra options at present.
 
