@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Slugtastic::VERSION
 
-  gem.add_development_dependency "rake"
-  gem.add_development_dependency "rspec"
-  gem.add_development_dependency "supermodel"
+  gem.add_development_dependency "rake", "~> 0"
+  gem.add_development_dependency "rspec", "~> 0"
+  gem.add_development_dependency "supermodel", "~> 0"
 end
