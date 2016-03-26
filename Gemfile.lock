@@ -14,20 +14,20 @@ GEM
     builder (2.1.2)
     diff-lcs (1.2.5)
     i18n (0.5.4)
-    rake (10.4.2)
-    rspec (3.3.0)
-      rspec-core (~> 3.3.0)
-      rspec-expectations (~> 3.3.0)
-      rspec-mocks (~> 3.3.0)
-    rspec-core (3.3.2)
-      rspec-support (~> 3.3.0)
-    rspec-expectations (3.3.1)
+    rake (11.1.1)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.3.0)
-    rspec-mocks (3.3.2)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.3.0)
-    rspec-support (3.3.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     supermodel (0.1.6)
       activemodel (~> 3.0.0)
 
@@ -35,10 +35,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rake
-  rspec
+  rake (~> 11.1)
+  rspec (~> 3.4)
   slugtastic!
-  supermodel
+  supermodel (~> 0)
 
 BUNDLED WITH
    1.11.2
