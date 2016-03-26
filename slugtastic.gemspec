@@ -4,6 +4,7 @@ require File.expand_path('../lib/slugtastic/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Dan Barber"]
   gem.email         = ["danbee@gmail.com"]
+  gem.licenses      = ['MIT']
   gem.description   = %q{A simple slug string generator for ActiveRecord. Will populate a slug attribute from another attribute.}
   gem.summary       = %q{A simple slug string generator for ActiveRecord.}
   gem.homepage      = "http://danbarber.me/slugtastic"
