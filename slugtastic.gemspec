@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.description   = "A simple slug string generator for ActiveRecord. " \
                       "Will populate a slug attribute from another attribute."
   gem.summary       = "A simple slug string generator for ActiveRecord."
-  gem.homepage      = "http://danbarber.me/slugtastic"
+  gem.homepage      = "https://danbee.github.io/slugtastic"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
