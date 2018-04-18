@@ -1,3 +1,11 @@
+## v2.0.1
+
+* Update homepage to new location.
+
+## v2.0.0
+
+* Remove dependency on supermodel for tests.
+
 ## v1.2.0
 
 * Added ability to substitute hyphen delimiter.
