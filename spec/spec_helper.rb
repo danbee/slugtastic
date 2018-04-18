@@ -1,2 +1,1 @@
-require 'slugtastic'
-require 'supermodel'
+require "slugtastic"
