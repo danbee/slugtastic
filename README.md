@@ -12,7 +12,8 @@ models.
 * Ruby 2.2.0+
 * Rails 5 or higher.
 
-It will probably work just find with earlier versions--down to Rails 3.1 and Ruby 1.9.3--but it's not tested.
+It will probably work just find with earlier versions--down to Rails 3.1 and
+Ruby 1.9.3--but it's not tested.
 
 ## Installation
 
