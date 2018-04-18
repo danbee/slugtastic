@@ -9,14 +9,16 @@ models.
 
 ## Requirements
 
-* Ruby 2.0.0+
-* Rails 3.1 or higher.
+* Ruby 2.2.0+
+* Rails 5 or higher.
+
+It will probably work just find with earlier versions--down to Rails 3.1 and Ruby 1.9.3--but it's not tested.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'slugtastic'
+    gem "slugtastic"
 
 And then execute:
 
