@@ -1,27 +1,10 @@
 # encoding: utf-8
 
 require "spec_helper"
-require "active_support/core_ext/hash/reverse_merge"
-require "active_model"
+require "support/fake_model"
 
-class BaseModel
-  include ActiveModel::Validations::Callbacks
+class BaseModel < FakeModel
   extend Slugtastic::ModelAdditions
-
-  def initialize(attrs = {})
-    attrs.each do |key, value|
-      instance_variable_set(:"@#{key}", value)
-    end
-  end
-
-  def self.create!(attrs)
-    new(attrs).save
-  end
-
-  def save
-    _run_validation_callbacks
-    self
-  end
 end
 
 class Model < BaseModel
